@@ -1,0 +1,11 @@
+The files in this folder are from Google's MediaPipe Tasks Vision
+(@mediapipe/tasks-vision 1.2.3) and the official HandLandmarker
+float16 model (hand_landmarker.task), licensed under Apache 2.0.
+
+  https://www.apache.org/licenses/LICENSE-2.0
+  https://github.com/google-ai-edge/mediapipe
+
+A one-line change was made to vision_bundle.mjs: the optional
+usage-metrics logger that would POST to odml.pa.googleapis.com
+is a no-op, so this room never opens a network request from
+MediaPipe. No video frames are stored or sent.
